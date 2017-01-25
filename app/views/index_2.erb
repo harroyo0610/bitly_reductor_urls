@@ -1,0 +1,18 @@
+  <h1>Bienvenido a Bitly Un Reductor De Urls!</h1>
+  <p>Escribe la URL:</p>
+<form action="/urls" method="post">
+  <input type="text" name="url" placeholder="Escribe aqui la url">
+  <input type="submit">
+</form>
+<% if @urls_list %>
+  <p>URLS:</p> 
+<% @urls_list.each do |value| %>
+  <a href="/<%= value.short_url %>" target="blank"><%= "http://codea.com/" + value.short_url %><br></a>
+<% end %>
+<% end %>
+
+ <a href="/login"><button id="login" type="button">Login</button></a>
+  <a href="/register"><button id="register" type="button">Registrate</button></a>
+
+  
+
